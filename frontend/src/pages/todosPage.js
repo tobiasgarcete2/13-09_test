@@ -74,11 +74,15 @@ export const todosPage = () => {
   table.appendChild(tbody);
 
   container.appendChild(btnHome);
-  fetch("http://localhost:4000/todos")
+
+
+  fetch("http://localhost:4000/todos",{
+    credentials : 'include'
+  })
     .then((response) => response.json())
     .then((data) => {
       data.todos.forEach((todo) => {
-        if (todo.id > 10) return;
+        if (todo.id === 0) return;
 
         const tr = document.createElement("tr");
 

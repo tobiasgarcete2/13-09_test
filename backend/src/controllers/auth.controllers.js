@@ -50,6 +50,8 @@ export const signOutCtrl = (req, res) => {
   }
 };
 
+
+
 export const validateSessionCtrl = (req, res) => {
   console.log(req.user);
   return res.json({
@@ -57,3 +59,4 @@ export const validateSessionCtrl = (req, res) => {
     user: req.user,
   });
 };
+
